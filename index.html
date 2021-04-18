@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./img.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Options -->
+        <div class="d-flex justify-content-end py-3">
+            <button class="btn btn-primary" onclick="showFormContainer()">Ceater new car</button>
+        </div>
+        <div class="card d-none" id="create-car-container">
+            <div class="card-body">
+                <form id="car-form" action="/cars" onsubmit="event.preventDefault(), car()">
+                    <div class="form-group">
+                      <label for="brand">Brand</label>
+                      <input type="text" class="form-control" id="brand" placeholder="brand" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" id="model" placeholder="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="color" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="year">Year</label>
+                          <input type="number" class="form-control" id="year" placeholder="year" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">URL car</label>
+                        <input type="text" class="form-control" id="image" placeholder="image" >
+                      </div>
+                    <button id="btn-car-form" type="submit"  class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+        <table class="table table-striped table-bordered mt-3">
+            <thead>
+                <tr class="text.center">
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Year</th>
+                    <th>Price in dollars</th>
+                    <th>Car photo</th>
+                    <th>Delete / Modify</th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="Cars-container">
+                <!-- Aquí van los datos --> 
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="./crud.js"></script>
+</body>
+</html>
