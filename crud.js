@@ -25,7 +25,7 @@ const cars = [
         model: "Cx-3",
         color: "Red",
         year: "2017",
-        price: "$ 10.000"
+        price: "$ 10.000",
         photo: "https://www.elcarrocolombiano.com/wp-content/uploads/2018/05/20180531-MAZDA-CX-3-2019-COLOMBIA-01-750x375.jpg"
      },
 ];
