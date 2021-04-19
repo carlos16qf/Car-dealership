@@ -5,7 +5,8 @@ const cars = [
         model: "zz",
         color: "blue",
         year: "2013",
-        price: "$ 15.000"
+        price: "$ 15.000",
+        photo: "https://benigarautomocion.com/wp-content/uploads/2019/06/bmw-serie-1-dinamismo.jpg"
         
      },
      {
@@ -15,6 +16,8 @@ const cars = [
         color: "green",
         year: "2014",
         price: "$ 18.000",
+        photo: "https://www.diariomotor.com/imagenes/picscache/1920x1600c/ford-fiesta-st-edition-2021-06_1920x1600c.jpg"
+         
      },
      {
         id: 2,
@@ -23,7 +26,7 @@ const cars = [
         color: "Red",
         year: "2017",
         price: "$ 10.000"
-        
+        photo: "https://www.elcarrocolombiano.com/wp-content/uploads/2018/05/20180531-MAZDA-CX-3-2019-COLOMBIA-01-750x375.jpg"
      },
 ];
 
@@ -42,7 +45,7 @@ function printCars(dataCars) {
                             <td>${car.price}</td>
                             <td>
                             <div class="">
-                                 <img class="img-max" src="https://www.diariomotor.com/imagenes/picscache/1920x1600c/ford-fiesta-st-edition-2021-06_1920x1600c.jpg" alt="car">
+                                 <img class="img-max" src="${car.photo}" alt="car">
                             </div>
                             </td>
                             <td>
@@ -68,7 +71,7 @@ function addCar() {
     const carColor = document.getElementById('color').value;
     const carYear = document.getElementById('year').value;
     const carPrice = document.getElementById('price').value;
-    
+    const carPhoto = document.getElementById('photo').value;
     
     
 
@@ -79,7 +82,7 @@ function addCar() {
         color: carColor,
         year: carYear,
         price: carPrice,
-        
+        photo: carPhoto,
     }
 
     cars.push(newCar);
